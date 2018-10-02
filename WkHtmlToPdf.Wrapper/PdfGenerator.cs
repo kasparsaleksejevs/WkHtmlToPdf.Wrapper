@@ -155,7 +155,7 @@ namespace WkHtmlToPdf.Wrapper
             const string defaultWkhtmlExeName = "wkhtmltopdf.exe";
 
             // search current executable path
-            wkhtmlPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+            wkhtmlPath = Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath);
             if (wkhtmlPath is null)
                 wkhtmlPath = AppDomain.CurrentDomain.BaseDirectory;
 
