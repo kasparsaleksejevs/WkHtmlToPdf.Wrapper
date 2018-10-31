@@ -8,5 +8,5 @@ PdfGenerator.Settings settings = new PdfGenerator.Settings
 {
 	PageOrientation = PdfGenerator.PageOrientation.Landscape 
 };
-byte[] pdfBytes = .GeneratePdf("https://www.google.com/", settings);
+byte[] pdfBytes = pdfGenerator.GeneratePdf("https://www.google.com/", settings);
 ```
